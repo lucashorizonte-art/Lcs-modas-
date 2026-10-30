@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URBAN MEN | Moda Masculina</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">URBAN<span>MEN.</span></div>
+
+    <nav id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+    </nav>
+
+    <div class="header-actions">
+        <button onclick="toggleCart()" class="cart-button">
+            🛒 <span id="cart-count">0</span>
+        </button>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    </div>
+</header>
+
+<section class="hero" id="inicio">
+    <div class="hero-content">
+        <p class="subtitle">NOVA COLEÇÃO 2026</p>
+        <h1>SEU ESTILO.<br>SUAS REGRAS.</h1>
+        <p>Vista sua personalidade. Descubra uma nova forma de se vestir.</p>
+        <a href="#produtos" class="btn">COMPRAR AGORA</a>
+    </div>
+</section>
+
+<section class="benefits">
+    <div>🚚 Frete grátis acima de R$ 299</div>
+    <div>🔒 Compra segura</div>
+    <div>↩ Troca facilitada</div>
+</section>
+
+<section class="products-section" id="produtos">
+
+    <div class="section-title">
+        <p>ESTILO E PERSONALIDADE</p>
+        <h2>NOSSOS PRODUTOS</h2>
+    </div>
+
+    <div class="filters">
+        <input
+            type="text"
+            id="search"
+            placeholder="Pesquisar produto..."
+        >
+
+        <select id="category">
+            <option value="todos">Todas as categorias</option>
+            <option value="camisetas">Camisetas</option>
+            <option value="calcas">Calças</option>
+            <option value="jaquetas">Jaquetas</option>
+            <option value="tenis">Tênis</option>
+        </select>
+    </div>
+
+    <div class="products-grid" id="products"></div>
+
+</section>
+
+<section class="banner">
+    <div>
+        <p>MAIS QUE ROUPAS, UM ESTILO DE VIDA.</p>
+        <h2>SEJA A SUA<br>MELHOR VERSÃO.</h2>
+        <a href="#produtos" class="btn">EXPLORAR COLEÇÃO</a>
+    </div>
+</section>
+
+<section class="about" id="sobre">
+    <h2>SOBRE A URBAN MEN</h2>
+    <p>
+        Acreditamos que estilo é uma forma de expressão.
+        Nossa missão é oferecer moda masculina com qualidade,
+        conforto e personalidade para homens que não têm medo
+        de mostrar quem são.
+    </p>
+</section>
+
+<section class="newsletter">
+    <h2>FAÇA PARTE DA URBAN MEN</h2>
+    <p>Receba novidades e ofertas exclusivas.</p>
+
+    <form id="newsletter-form">
+        <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+        <button type="submit">CADASTRAR</button>
+    </form>
+    <p id="newsletter-message"></p>
+</section>
+
+<footer id="contato">
+    <div class="logo">URBAN<span>MEN.</span></div>
+    <p>Moda masculina para quem tem atitude.</p>
+    <p>Instagram | WhatsApp | Atendimento</p>
+    <p>© 2026 URBAN MEN. Todos os direitos reservados.</p>
+</footer>
+
+<!-- CARRINHO -->
+<div class="cart-overlay" id="cart-overlay" onclick="closeCart()"></div>
+
+<aside class="cart" id="cart">
+    <div class="cart-header">
+        <h2>MEU CARRINHO</h2>
+        <button onclick="closeCart()">✕</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <h3>Total: <span id="cart-total">R$ 0,00</span></h3>
+        <button class="checkout" onclick="checkout()">
+            FINALIZAR PEDIDO
+        </button>
+    </div>
+</aside>
+
+<script src="script.js"></script>
+
+</body>
+</html>
