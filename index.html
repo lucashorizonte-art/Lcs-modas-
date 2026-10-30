@@ -4,6 +4,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DROP STREET - Moda masculina streetwear para skatistas.">
+    <title>DROP STREET | Streetwear</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo">DROP<span>STREET.</span></a>
+
+    <nav class="nav" id="nav">
+        <a href="#inicio">Início</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre nós</a>
+    </nav>
+
+    <div class="header-actions">
+        <button class="cart-button" onclick="toggleCart()">
+            SACOLA <span id="cart-count">0</span>
+        </button>
+        <button class="menu-button" onclick="toggleMenu()">☰</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <span class="tag">STREET CULTURE / EST. 2026</span>
+            <h1>YOUR STYLE.<br>YOUR RULES.</h1>
+            <p>Vista sua atitude. Viva o skate. Seja diferente.</p>
+            <a href="#produtos" class="hero-button">EXPLORE A COLEÇÃO ↗</a>
+        </div>
+        <div class="hero-bottom">
+            <span>STREETWEAR FOR EVERYDAY REBELS</span>
+            <span>DROP STREET®</span>
+        </div>
+    </section>
+
+    <section class="categories">
+        <div>
+            <span>01 / STYLE</span>
+            <h2>FEITO PARA<br>AS RUAS.</h2>
+        </div>
+        <p>Não seguimos tendências. Criamos nosso próprio caminho.</p>
+    </section>
+
+    <section class="products-section" id="produtos">
+        <div class="section-heading">
+            <div>
+                <span class="tag">DROP STREET COLLECTION</span>
+                <h2>PEÇAS EM DESTAQUE<span>.</span></h2>
+            </div>
+            <input type="search" id="search" placeholder="Buscar produto...">
+        </div>
+
+        <div class="filters">
+            <button class="filter active" data-category="Todos">Todos</button>
+            <button class="filter" data-category="Camisetas">Camisetas</button>
+            <button class="filter" data-category="Calças">Calças</button>
+            <button class="filter" data-category="Moletons">Moletons</button>
+            <button class="filter" data-category="Acessórios">Acessórios</button>
+        </div>
+
+        <div class="products-grid" id="products-grid"></div>
+    </section>
+
+    <section class="manifesto" id="sobre">
+        <span>DROP STREET® / OUR MANIFESTO</span>
+        <h2>THE STREET<br>IS OUR <span>RUNWAY.</span></h2>
+        <p>Mais que roupas, uma cultura. A DROP STREET nasceu da liberdade, da criatividade e da vontade de fazer diferente. Para quem transforma qualquer lugar em pista.</p>
+    </section>
+
+    <section class="newsletter">
+        <h2>FAÇA PARTE DO DROP.</h2>
+        <p>Receba novidades e lançamentos exclusivos.</p>
+        <form id="newsletter-form">
+            <input type="email" placeholder="Seu melhor e-mail" required>
+            <button type="submit">INSCREVER ↗</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <a href="#" class="logo">DROP<span>STREET.</span></a>
+    <p>© 2026 DROP STREET. TODOS OS DIREITOS RESERVADOS.</p>
+    <p>STREETWEAR IS A LIFESTYLE.</p>
+</footer>
+
+<!-- CARRINHO -->
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<aside class="cart" id="cart">
+    <div class="cart-header">
+        <h2>SUA SACOLA</h2>
+        <button onclick="toggleCart()">✕</button>
+    </div>
+
+    <div id="cart-items"></div>
+
+    <div class="cart-footer">
+        <div class="total">
+            <span>TOTAL</span>
+            <strong id="cart-total">R$ 0,00</strong>
+        </div>
+        <button class="checkout" onclick="checkout()">FINALIZAR PEDIDO ↗</button>
+    </div>
+</aside>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBAN MEN | Moda Masculina</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
